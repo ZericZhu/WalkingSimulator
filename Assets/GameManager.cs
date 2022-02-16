@@ -24,9 +24,17 @@ public class GameManager : MonoBehaviour
         {
             Color TempRandomColor = new Color(Random.value, Random.value, Random.value);
             print("space key was pressed");
-            for (int i =0; i<Goog.transform.childCount;i++)
+            for (int i =0; i<GoogLeft.transform.childCount;i++)
             {
-                Goog.transform.GetChild(i).GetComponent<SpriteRenderer>().color = TempRandomColor;
+                GoogLeft.transform.GetChild(i).GetComponent<SpriteRenderer>().color = TempRandomColor;
+            }
+            for (int i = 0; i < GoogMid.transform.childCount; i++)
+            {
+                GoogMid.transform.GetChild(i).GetComponent<SpriteRenderer>().color = TempRandomColor;
+            }
+            for (int i = 0; i < GoogRight.transform.childCount; i++)
+            {
+                GoogRight.transform.GetChild(i).GetComponent<SpriteRenderer>().color = TempRandomColor;
             }
             MainText.GetComponent<TextMeshProUGUI>().text = RandomWord[0];
             MainText.GetComponent<TextMeshProUGUI>().font = RandomFont[0];
